@@ -1,0 +1,16 @@
+using Derby InMomory Db with signleton pattern
+http://shengwangi.blogspot.com/2015/10/how-to-use-embedded-java-db-derby-in-maven.html
+
+
+
+we have Abstract Page class
+subclasses of Page are ItemPage, ContactPage, AboutPage
+we have Abstract Website , which has abstract method of createWebsite
+subclasses of website are BLOG and SHOP : basically which type of site you want create
+
+we have WebsiteFactory which has static method called getWebsite(String type)
+which takes string as argument , based on that type string it create that
+type of Website (BLOG or SHOP) return Website instance
+
+
+

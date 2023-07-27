@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Jul 27 22:57:17 IST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0182-40b2-d115-0000077002b8 
+on database directory C:\PracticeJava\DesignPatterns\Bryan_Hansen\DesignPatterns\MyDB\demo with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd 
+Loaded from file:/C:/Users/sagar/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.11+9-LTS-194
+user.dir=C:\PracticeJava\DesignPatterns\Bryan_Hansen\DesignPatterns
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
