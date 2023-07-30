@@ -1,4 +1,4 @@
-package com.pluralsight.structural.flyway;
+package com.pluralsight.structural.flyweight;
 
 public class FlyweightEverydayDemo {
 

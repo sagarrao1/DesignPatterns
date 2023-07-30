@@ -1,6 +1,6 @@
 package com.pluralsight.structural.decarator;
 
-public class DressingDecorator extends SandwitchDecorator {
+public class DressingDecorator extends SandwitchDecarator {
 
 	public DressingDecorator(Sandwitch customSandwitch) {
 		super(customSandwitch);
@@ -8,10 +8,10 @@ public class DressingDecorator extends SandwitchDecorator {
 
 	@Override
 	public String make() {
-		return super.make() + addDressing();
+		return super.make()+ addDressing();
 	}
 
-	private String addDressing() {
-		return " + mustard";
+	public String addDressing() {
+		return " +Mustard";
 	}
 }

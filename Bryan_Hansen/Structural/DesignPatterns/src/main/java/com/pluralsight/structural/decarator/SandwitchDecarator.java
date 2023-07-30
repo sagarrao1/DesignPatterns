@@ -1,10 +1,10 @@
 package com.pluralsight.structural.decarator;
 
-public abstract class SandwitchDecorator implements Sandwitch {
+public abstract class SandwitchDecarator implements Sandwitch {
 	
-	Sandwitch customSandwitch;
+	protected Sandwitch customSandwitch;	
 
-	public SandwitchDecorator(Sandwitch customSandwitch) {
+	public SandwitchDecarator(Sandwitch customSandwitch) {
 		this.customSandwitch = customSandwitch;
 	}
 
@@ -12,8 +12,6 @@ public abstract class SandwitchDecorator implements Sandwitch {
 	public String make() {
 		return customSandwitch.make();
 	}
-
-	
 	
 
 }

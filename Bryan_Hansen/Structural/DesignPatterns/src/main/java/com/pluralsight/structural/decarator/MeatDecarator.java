@@ -1,8 +1,8 @@
 package com.pluralsight.structural.decarator;
 
-public class MeatDecorator extends SandwitchDecorator {
+public class MeatDecarator extends SandwitchDecarator {
 
-	public MeatDecorator(Sandwitch customSandwitch) {
+	public MeatDecarator(Sandwitch customSandwitch) {
 		super(customSandwitch);
 	}
 
@@ -11,8 +11,8 @@ public class MeatDecorator extends SandwitchDecorator {
 		return super.make() + addMeat();
 	}
 	
-	private String addMeat() {
-		return " + turkey";
+	public String addMeat() {
+		return " +Turkey ";
 	}
 
 }

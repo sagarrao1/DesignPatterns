@@ -23,10 +23,10 @@ public class EmployeeAdaptorFromLdap implements Employee {
 		return instance.getMail();
 	}
 
-//	@Override
-//	public String toString() {
-//		return "[Id =" + instance.getEid() + "]";
-//	}
+	@Override
+	public String toString() {
+		return "[Id =" + instance.getEid() + "]";
+	}
 	
 	
 
