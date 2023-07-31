@@ -3,7 +3,11 @@ package com.structural.dacarator;
 public class StandardHat implements Hat {
 
 	private String name;
-	
+		
+	public StandardHat(String name) {
+		this.name = name;
+	}
+
 	@Override
 	public String getName() {
 		return name;

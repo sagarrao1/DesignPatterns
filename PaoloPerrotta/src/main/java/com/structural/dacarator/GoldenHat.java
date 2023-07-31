@@ -1,32 +1,38 @@
 package com.structural.dacarator;
 
+//we can refactor goldenhat and ribbonHat by extracting duplicated code into new class c
+//HatDeacarator
+
 public class GoldenHat implements Hat {
 
-	private Hat hat;
+	private Hat decaratedHat;
 
-	public GoldenHat(Hat hat) {
-		super();
-		this.hat = hat;
+	public GoldenHat(Hat decaratedHat) {
+		this.decaratedHat = decaratedHat;
 	}
 
 	@Override
 	public String getName() {
-		return hat.getName() + " Golden ";
+		return decaratedHat.getName() ;
 	}
 
 	@Override
 	public Double getPrice() {
-		return hat.getPrice() + Double.valueOf(2000);
+			if (isPremium()) {
+				return decaratedHat.getPrice() + Double.valueOf(3000);
+			} else {
+				return decaratedHat.getPrice() + Double.valueOf(1000);
+			}
 	}
 
 	@Override
 	public String getDescription() {
-		return hat.getDescription() + " Golden ";
+		return decaratedHat.getDescription() + " Golden ";
 	}
 
 	@Override
 	public Boolean isPremium() {
-		return hat.isPremium();
+		return decaratedHat.isPremium();
 	}
 	
 	

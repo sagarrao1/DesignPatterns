@@ -4,6 +4,10 @@ public class PremiumHat implements Hat {
 
 	private String name;
 	
+	public PremiumHat(String name) {
+		this.name = name;
+	}
+
 	@Override
 	public String getName() {
 		return name;

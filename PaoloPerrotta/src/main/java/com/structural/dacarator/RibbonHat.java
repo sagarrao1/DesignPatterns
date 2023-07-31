@@ -2,31 +2,31 @@ package com.structural.dacarator;
 
 public class RibbonHat implements Hat {
 	
-	private Hat hat;	
+	private Hat decaratedHat;	
 
-	public RibbonHat(Hat hat) {
+	public RibbonHat(Hat decaratedHat) {
 		super();
-		this.hat = hat;
+		this.decaratedHat = decaratedHat;
 	}
 
 	@Override
 	public String getName() {
-		return hat.getName();
+		return decaratedHat.getName();
 	}
 
 	@Override
 	public Double getPrice() {
-		return hat.getPrice() + Double.valueOf(1000);
+		return decaratedHat.getPrice() + Double.valueOf(1000);
 	}
 
 	@Override
 	public String getDescription() {
-		return hat.getDescription() + " Ribbon ";
+		return decaratedHat.getDescription() + " Ribbon ";
 	}
 
 	@Override
 	public Boolean isPremium() {
-		return hat.isPremium();
+		return decaratedHat.isPremium();
 	}
 
 }

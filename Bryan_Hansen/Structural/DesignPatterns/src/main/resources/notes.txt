@@ -14,3 +14,22 @@ type of Website (BLOG or SHOP) return Website instance
 
 
 
+
+What are the 10 most used design patterns?
+
+Builder ( While Writing Unit Tests )
+Prototype ( Cloning )
+Adapter ( asList , toString )
+Chain Of Responsibility ( Logging )
+Singleton
+Factory ( Action Mapping )
+Proxy
+Observer ( Event Listener )
+MVC ( Web frameworks )
+Filter ( Criteria )
+
+
+
+
+
+
