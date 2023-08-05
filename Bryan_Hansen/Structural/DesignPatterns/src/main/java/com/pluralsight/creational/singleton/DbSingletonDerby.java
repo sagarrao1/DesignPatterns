@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class DbSingletonDerby{
 	
 	private String dbUrl = "jdbc:derby:..\\DesignPatterns\\MyDB\\demo;create=true";
-	Connection conn;
+	private Connection conn=  null;
 	
 	private static volatile DbSingletonDerby instance = null;
 	
@@ -18,6 +18,12 @@ public class DbSingletonDerby{
 		// Don't need to register, we can directly call getconnection()
 		if (instance != null) {
 			throw new RuntimeException("Use getINstance method to create");
+		}
+		
+		try {			
+		    conn = DriverManager.getConnection(dbUrl);
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	};
 	
@@ -34,17 +40,17 @@ public class DbSingletonDerby{
 	
 	
 	public Connection getConnection() {		
-		if (conn == null) {
-			synchronized(DbSingletonDerby.class) {
-				if (conn == null) {
-					try {			
-					    conn = DriverManager.getConnection(dbUrl);
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		}			
+//		if (conn == null) {
+//			synchronized(DbSingletonDerby.class) {
+//				if (conn == null) {
+//					try {			
+//					    conn = DriverManager.getConnection(dbUrl);
+//					} catch (SQLException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		}			
 		
 		return conn;
 	}
@@ -57,15 +63,15 @@ public class DbSingletonDerby{
     	stmt= conn.createStatement();
     	
     	// drop table
-         stmt.executeUpdate("Drop Table users");
+//         stmt.executeUpdate("Drop Table users");
     	
          // create table
-         stmt.executeUpdate("Create table users (id int primary key, name varchar(30))");
-         System.out.println("table created");
+//         stmt.executeUpdate("Create table users (id int primary key, name varchar(30))");
+//         System.out.println("table created");
          
          // insert 2 rows
-         stmt.executeUpdate("insert into users values (1,'tom')");
-         stmt.executeUpdate("insert into users values (2,'peter')");
+         stmt.executeUpdate("insert into users values (3,'tom')");
+         stmt.executeUpdate("insert into users values (4,'peter')");
       
          // query
          ResultSet rs = stmt.executeQuery("SELECT * FROM users");

@@ -10,7 +10,10 @@ public class BuilderEverydayDemo {
 		builder.append("almost anything we want to a String. ");
 		builder.append(42);
 		
+		
 		System.out.println(builder.toString());
+//		String builderString = builder.toString();
+//		System.out.println(builderString);
 	}
 
 }

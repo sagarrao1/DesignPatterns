@@ -2,6 +2,40 @@ using Derby InMomory Db with signleton pattern
 http://shengwangi.blogspot.com/2015/10/how-to-use-embedded-java-db-derby-in-maven.html
 
 
+Creational patterns are used to create objects in different ways
+
+Singleton
+Builder
+prototype
+Factory
+AbstractFactory
+
+
+Builder pattern makes that class immutable , once constructor is called they can't
+change the values because we don't have setters in computer class
+we also used enums for type safety for parameters to use specific values
+it is immutable and enforces the contract
+it will be implemented using static inner class
+it is creative way of dealing complexity of constructors
+
+ 
+prototype pattern is used clone the object
+it avoids costly creation (it won't use new keyword to create object)
+when we use clone it does (shollow copy vs deep copy)
+shollow copy mean it copies primitive values , if it have Object , it copies reference
+deepy copy mean it create different object of same class by cloning it 
+
+
+Factory pattern is parameter driven construction
+Does not expose instantiation logic , defers to sub classes
+all we know common interface that factory exposes
+Example is Calendar. it returns different types of calendar depending upon parameter that we 
+pass while instantiating calendar construction
+
+Calendar cal =  Calendar.getInstance() --> create Gregorian Calendar
+Calendar cal =  Calendar.getInstance(TimeZone)
+
+
 
 we have Abstract Page class
 subclasses of Page are ItemPage, ContactPage, AboutPage
@@ -11,6 +45,24 @@ subclasses of website are BLOG and SHOP : basically which type of site you want 
 we have WebsiteFactory which has static method called getWebsite(String type)
 which takes string as argument , based on that type string it create that
 type of Website (BLOG or SHOP) return Website instance
+
+
+
+
+AbstractFactory is factory of factories
+AbstractFactory typicaly developed in frameworks
+example :
+DocumentBuilderfactory abstractfactory =  DocumentBuilderfactory.newInstance()
+
+in AbstractFactory we don't know what implementation it choosen when buuilding factory
+
+
+Parent Abstract class does not know implementation of sub classes
+in example Credit card factory does not know about visa gold or visa platinum credit card or amex gold or amext platinum credit card
+it only know amexFactory or VisaFactory
+
+
+
 
 
 

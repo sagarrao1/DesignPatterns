@@ -10,9 +10,16 @@ public class VisaFactory extends CreditcardFactory {
 		case PLATINUM:			
 			return new VisaPlatinumCreditcard();
 		default:
-			break;
+			throw new IllegalStateException("Invalid cardType: " + cardType);
 		}
-		return null;
+	}
+
+	
+//	we should have write like amexfactory getValidator like adding switch. this is show we can write in different also
+	@Override
+	public Validator getValidator(CardType cardType) {
+		return new VisaGoldValidator();			
+			
 	}
 
 }

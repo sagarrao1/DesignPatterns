@@ -15,5 +15,6 @@ public abstract class CreditcardFactory {
 	
 	public abstract CreditCard getCreditCard(CardType cardType);
 	
+	public abstract Validator getValidator(CardType cardType);
 
 }
