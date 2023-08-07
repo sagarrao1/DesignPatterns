@@ -1,3 +1,15 @@
+Why design patterns : it's way of communication with other developers
+3 types
+creational 
+structural
+behavioural
+
+Creational patterns are used to create objects in different ways
+behavioural patterns are focused on how objects are interacted with each other
+structural patterns
+
+
+
 using Derby InMomory Db with signleton pattern
 http://shengwangi.blogspot.com/2015/10/how-to-use-embedded-java-db-derby-in-maven.html
 
