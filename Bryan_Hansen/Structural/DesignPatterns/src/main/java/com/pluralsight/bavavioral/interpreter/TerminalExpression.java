@@ -8,6 +8,7 @@ public class TerminalExpression implements Expression{
 	
 	public TerminalExpression(String data) {
 		this.data = data;
+		System.out.println(this.data);
 	}
 
 	@Override

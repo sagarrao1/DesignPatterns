@@ -78,9 +78,21 @@ behavioural
 
 interpriter : 
 
+Iterator : Effient way to traverse(loop through) objects
+			hides algorithm
+			simplify client
+			take advantage of foreach (advanced for loop)
 
 
 
+Memento : used to store state of object
+Example : Java.io.Serializable 
+
+
+
+Observer : this concept is used when subject has one to many observers
+When we need event handling capabilities
+Example in java api is : Java.util.observer, Java.jms.Topic, Java.awt.eventListner
 
 
 What are the 10 most used design patterns?
